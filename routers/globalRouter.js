@@ -1,14 +1,17 @@
-import express from "express";
-import routes from "../routes"
-import { home, search } from "../controllers/videoControllers";
-import { getJoin, postJoin, getLogin, postLogin, logout } from "../controllers/userControllers";
+import express from 'express';
+import routes from '../routes';
+import { home, search } from '../controllers/videoControllers';
+import {
+  getJoin, postJoin, getLogin, postLogin, logout,
+} from '../controllers/userControllers';
+import { onlyPublic } from '../middlewares';
 
 const globalRouter = express.Router();
 
-globalRouter.get(routes.join, getJoin);
-globalRouter.post(routes.join, postJoin);
+globalRouter.get(routes.join, onlyPublic, getJoin);
+globalRouter.post(routes.join, postJoin, postLogin);
 
-globalRouter.get(routes.login, getLogin);
+globalRouter.get(routes.login, onlyPublic, getLogin);
 globalRouter.post(routes.login, postLogin);
 
 globalRouter.get(routes.home, home);

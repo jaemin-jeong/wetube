@@ -1,10 +1,12 @@
+import passport from 'passport';
 import routes from '../routes';
+import User from '../models/User';
 
 export const getJoin = (req, res) => {
   res.render('Join', { pageTitle: 'Join' });
 };
 
-export const postJoin = (req, res) => {
+export const postJoin = async (req, res, next) => {
   console.log(req.body);
   const {
     body: {
@@ -15,9 +17,19 @@ export const postJoin = (req, res) => {
     res.status(400);
     res.render('Join', { pageTitle: 'Join' });
   } else {
-    // To Do: Register User
-    // To Do: Log User in
-    res.redirect(routes.home);
+    try {
+      // To Do: Register User
+      const user = await User({
+        name,
+        email,
+      });
+      await User.register(user, password);
+      next();
+      // To Do: Log User in
+    } catch (error) {
+      console.log(error);
+      res.redirect(routes.home);
+    }
   }
 };
 
@@ -25,9 +37,10 @@ export const getLogin = (req, res) => {
   res.render('Login', { pageTitle: 'Login' });
 };
 
-export const postLogin = (req, res) => {
-  res.redirect(routes.home);
-};
+export const postLogin = passport.authenticate('local', {
+  successRedirect: routes.home,
+  failureRedirect: routes.login,
+});
 
 export const logout = (req, res) => {
   // To Do: process Logout
