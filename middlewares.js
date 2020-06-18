@@ -20,6 +20,7 @@ export const onlyPublic = (req, res, next) => {
 };
 
 export const onlyPrivate = (req, res, next) => {
+  console.log(req.user);
   if (req.user) {
     next();
   } else {
