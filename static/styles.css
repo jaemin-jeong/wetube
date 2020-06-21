@@ -179,34 +179,19 @@ textarea,
   background-color: white;
   max-width: 320px;
   resize: none; }
-  button::-webkit-input-placeholder,
-  input:not([type="file"])::-webkit-input-placeholder,
-  textarea::-webkit-input-placeholder,
-  .fileUpload::-webkit-input-placeholder {
+  button::-webkit-input-placeholder, input:not([type="file"])::-webkit-input-placeholder, textarea::-webkit-input-placeholder, .fileUpload::-webkit-input-placeholder {
     font-weight: 300;
     color: rgba(0, 0, 0, 0.7); }
-  button:-moz-placeholder,
-  input:not([type="file"]):-moz-placeholder,
-  textarea:-moz-placeholder,
-  .fileUpload:-moz-placeholder {
+  button:-moz-placeholder, input:not([type="file"]):-moz-placeholder, textarea:-moz-placeholder, .fileUpload:-moz-placeholder {
     font-weight: 300;
     color: rgba(0, 0, 0, 0.7); }
-  button::-moz-placeholder,
-  input:not([type="file"])::-moz-placeholder,
-  textarea::-moz-placeholder,
-  .fileUpload::-moz-placeholder {
+  button::-moz-placeholder, input:not([type="file"])::-moz-placeholder, textarea::-moz-placeholder, .fileUpload::-moz-placeholder {
     font-weight: 300;
     color: rgba(0, 0, 0, 0.7); }
-  button:-ms-input-placeholder,
-  input:not([type="file"]):-ms-input-placeholder,
-  textarea:-ms-input-placeholder,
-  .fileUpload:-ms-input-placeholder {
+  button:-ms-input-placeholder, input:not([type="file"]):-ms-input-placeholder, textarea:-ms-input-placeholder, .fileUpload:-ms-input-placeholder {
     font-weight: 300;
     color: rgba(0, 0, 0, 0.7); }
-  button::-ms-input-placeholder,
-  input:not([type="file"])::-ms-input-placeholder,
-  textarea::-ms-input-placeholder,
-  .fileUpload::-ms-input-placeholder {
+  button::-ms-input-placeholder, input:not([type="file"])::-ms-input-placeholder, textarea::-ms-input-placeholder, .fileUpload::-ms-input-placeholder {
     font-weight: 300;
     color: rgba(0, 0, 0, 0.7); }
   button::placeholder,
@@ -437,13 +422,9 @@ input[type="submit"] {
   .videoPlayer:hover .videoPlayer__controls {
     opacity: 1; }
   .videoPlayer video {
+    width: 100%;
     max-width: 100%; }
   .videoPlayer .videoPlayer__controls {
-    opacity: 0;
-    -webkit-transition: opacity 0.4s linear;
-    -o-transition: opacity 0.4s linear;
-    -moz-transition: opacity 0.4s linear;
-    transition: opacity 0.4s linear;
     color: white;
     position: absolute;
     z-index: 9;
@@ -568,8 +549,7 @@ input[type="submit"] {
        -moz-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    margin-bottom: 18px;
-    margin-bottom: 50px; }
+    margin-bottom: 18px; }
     .user-profile .user-profile__header .profile__username {
       font-size: 18px;
       margin-top: 15px; }
