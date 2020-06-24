@@ -15,7 +15,7 @@ const config = {
         test: /\.(js)$/,
         use: [
           {
-            loader: 'babel-loader',
+            loader: 'babel-loader', query: { compact: false },
           },
         ],
       },

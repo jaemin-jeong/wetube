@@ -10,5 +10,6 @@ module.exports = {
   },
   rules: {
     'no-console': 'off',
+    'no-use-before-define': 'off',
   },
 };

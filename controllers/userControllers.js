@@ -137,7 +137,8 @@ export const postEditProfile = async (req, res) => {
 export const userDetail = async (req, res) => {
   const { params: { id } } = req;
   try {
-    const user = await User.findById(id);
+    const user = await User.findById(id).populate('videos');
+    console.log(user);
     res.render('userDetail', { pageTitle: 'User Detail', user });
   } catch {
     res.redirect(routes.home);

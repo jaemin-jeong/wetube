@@ -7,7 +7,7 @@ const CommnetSchema = new mongoose.Schema({
   },
   createdAt: {
     type: Date,
-    default: Date.now
+    default: Date.now,
   },
   creator: {
     type: mongoose.Schema.Types.ObjectId,
@@ -16,4 +16,4 @@ const CommnetSchema = new mongoose.Schema({
 });
 
 const model = mongoose.model('Comment', CommnetSchema);
-export default model
+export default model;
