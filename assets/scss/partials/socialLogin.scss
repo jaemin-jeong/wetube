@@ -19,10 +19,40 @@
   }
   .social-login--github {
     background-color: $black;
-    color: white;
+    a {
+      text-decoration: none; 
+      color: white;
+      &:visited {
+        text-decoration: none;
+      }
+      &:hover {
+        text-decoration: none;
+      }
+      &:focus {
+        text-decoration: none;
+      }
+      &:active {
+        text-decoration: none;
+      }
+    }
   }
   .social-login--facebook {
     background-color: #3a5998;
-    color: white;
+    // color: white;
+    a{text-decoration: none;
+      color: white;
+      &:visited {
+        text-decoration: none;
+      }
+      &:hover {
+        text-decoration: none;
+      }
+      &:focus {
+        text-decoration: none;
+      }
+      &:active {
+        text-decoration: none;
+      }
+      }
   }
 }
