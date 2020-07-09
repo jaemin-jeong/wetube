@@ -7,5 +7,17 @@
     font-size: 18px;
     font-weight: 300;
     margin-bottom: 10px;
+    text-decoration: none;
+    color: black;
+    &:visited{
+      text-decoration: none;
+    }
+  }
+  .videoBlock__views {
+    text-decoration: none;
+    color: gray;
+    &:visited{
+      text-decoration: none;
+    }
   }
 }
