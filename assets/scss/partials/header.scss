@@ -29,6 +29,22 @@
         li:not(:last-child) {
           margin-right: 15px;
         }
+            a{
+              text-decoration: none;
+              color: white;
+              &:visited{
+                text-decoration: none;
+              }
+              &:hover{
+                text-decoration: none;
+              }
+              &:active{
+                text-decoration: none;
+              }
+              &:focus{
+                text-decoration: none;
+              }
+            }
       }
       form {
         width: 100%;
